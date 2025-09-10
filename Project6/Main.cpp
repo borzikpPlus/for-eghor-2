@@ -45,9 +45,17 @@ public:
 		strcpy_s(model, strlen(mod) + 1, mod);
 	}
 
+	~PC()
+	{
+		delete[] model;
+	}
 
-
-
+	void Print()
+	{
+		cout << "--- CPU: \n";
+		cout << model << "\t" << price << "\t" << price << endl;
+		Cpu.Print();
+	}
 
 
 
@@ -59,7 +67,8 @@ public:
 
 int main()
 {
-
+	PC obj("HP", 2000, "Amd", 3.5, 9000);
+	obj.Print();
 
 
 
